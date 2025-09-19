@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Royal Enfield Showroom - Student Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; padding: 0; }
+        #nav { background: #333; color: #fff; padding: 10px; }
+        #nav a { color: #fff; margin: 0 15px; text-decoration: none; cursor: pointer; }
+        .container { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px; box-shadow: 1px 1px 6px #ccc; }
+        h1 { color: #e85532; }
+        .section { display: none; }
+        .active { display: block; }
+        form input, form select { width: 200px; margin: 4px 0 10px 0; padding: 6px; }
+        form button { background: #e85532; color: #fff; border: none; padding: 6px 18px; cursor: not-allowed; }
+        .coming { color: #999; font-style: italic; }
+        .broken { color: #d66; font-size: 13px; }
+        footer { font-size:12px; color:#999; margin-top: 40px; text-align:center; }
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About Us</a>
+        <a onclick="showSection('book')">Book Test Ride</a>
+    </div>
+
+    <div class="container">
+        <!-- Home Section -->
+        <div id="home" class="section active">
+            <h1>Royal Enfield Showroom</h1>
+            <p>Welcome to our demo showroom site. Explore Royal Enfield bikes and book a test ride.<br>
+                <span class="coming">[Banner image missing]</span>
+            </p>
+            <hr>
+            <h2>Latest Bikes</h2>
+            <ul>
+                <li>Classic 350 <span class="coming">[Image Not Available]</span></li>
+                <li>Meteor 350 <span class="coming">[Image Not Available]</span></li>
+                <li>Bullet 350 <span class="coming">[Image Not Available]</span></li>
+            </ul>
+        </div>
+
+        <!-- About Us Section -->
+        <div id="about" class="section">
+            <h1>About Us</h1>
+            <p>Welcome to [Your City] Royal Enfield Showroom!<br>
+                Our mission is to provide premium motorcycles and reliable service.<br>
+                <span class="coming">[Team profile images coming soon]</span>
+            </p>
+            <hr>
+            <h2>Our Values</h2>
+            <ul>
+                <li>Quality Service</li>
+                <li>Customer Satisfaction</li>
+                <li>Genuine Accessories</li>
+            </ul>
+            <span class="coming">More about us coming soon...</span>
+        </div>
+
+        <!-- Book Test Ride Section -->
+        <div id="book" class="section">
+            <h1>Book a Free Test Ride</h1>
+            <form>
+                Name:<br><input type="text" name="name" /><br>
+                Phone:<br><input type="text" name="phone" /><br>
+                Preferred Model:<br>
+                <select name="model">
+                    <option>Classic 350</option>
+                    <option>Meteor 350</option>
+                    <option>Bullet 350</option>
+                </select><br>
+                Date & Time:<br><input type="text" name="datetime" placeholder="Not working yet" /><br>
+                <button disabled>Book Test Ride</button>
+            </form>
+            <span class="broken">Form not functional yet!</span>
+        </div>
+
+        <footer>© 2025 Royal Enfield Demo Showroom | Student Project | Some pages are incomplete.</footer>
+    </div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
