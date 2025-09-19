@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Royal Enfield Showroom - Nagar Road</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; padding: 0; }
+        #nav { background: #333; color: #fff; padding: 10px; display: flex; flex-wrap: wrap; justify-content: center; }
+        #nav a { color: #fff; margin: 5px 15px; text-decoration: none; cursor: pointer; white-space: nowrap; }
+        .container { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px; box-shadow: 1px 1px 6px #ccc; }
+        h1 { color: #e85532; }
+        .section { display: none; }
+        .active { display: block; }
+        form input, form select { width: 100%; max-width: 300px; margin: 8px 0 15px 0; padding: 8px; box-sizing: border-box; }
+        form button { background: #e85532; color: #fff; border: none; padding: 10px 20px; cursor: not-allowed; border-radius: 4px; }
+        .broken { color: #d66; font-size: 13px; }
+        footer { font-size:12px; color:#999; margin-top: 40px; text-align:center; padding-bottom: 20px; }
+        img { max-width: 100%; height: auto; margin: 15px 0; border-radius: 6px; display: block; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 15px; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            #nav a { margin: 8px 10px; font-size: 16px; }
+            .container { margin: 10px; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About Us</a>
+        <a onclick="showSection('book')">Book Test Ride</a>
+    </div>
+
+    <div class="container">
+        <!-- Home Section -->
+        <div id="home" class="section active">
+            <h1>Royal Enfield Showroom - Nagar Road</h1>
+            <p>Welcome to our Nagar Road showroom demo site. Explore Royal Enfield bikes and book a test ride.</p>
+            <img src="PLACEHOLDER_NAGARROAD_SHOP_FRONT" alt="Royal Enfield Showroom Front - Nagar Road" />
+            <hr>
+            <h2>Latest Bikes</h2>
+            <ul>
+                <li>
+                    Classic 350  
+                    <br>
+                    <img src="PLACEHOLDER_NAGARROAD_CLASSIC350" alt="Classic 350 Royal Enfield - Nagar Road" />
+                </li>
+                <li>
+                    Meteor 350  
+                    <br>
+                    <img src="PLACEHOLDER_NAGARROAD_METEOR350" alt="Meteor 350 Royal Enfield - Nagar Road" />
+                </li>
+                <li>
+                    Bullet 350  
+                    <br>
+                    <img src="PLACEHOLDER_NAGARROAD_BULLET350" alt="Bullet 350 Royal Enfield - Nagar Road" />
+                </li>
+            </ul>
+        </div>
+
+        <!-- About Us Section -->
+        <div id="about" class="section">
+            <h1>About Us - Nagar Road Showroom</h1>
+            <p>Welcome to the Royal Enfield showroom located at Nagar Road! Our showroom offers premium motorcycles and superior customer service.</p>
+            <img src="PLACEHOLDER_NAGARROAD_SHOWROOM_INTERIOR" alt="Showroom Interior - Nagar Road" />
+            <hr>
+            <h2>Our Values</h2>
+            <ul>
+                <li>High Quality Service</li>
+                <li>Customer Satisfaction</li>
+                <li>Genuine Parts & Accessories</li>
+            </ul>
+        </div>
+
+        <!-- Book Test Ride Section -->
+        <div id="book" class="section">
+            <h1>Book a Free Test Ride - Nagar Road</h1>
+            <form>
+                Name:<br><input type="text" name="name" placeholder="Your name" /><br>
+                Phone:<br><input type="tel" name="phone" placeholder="Your phone number" /><br>
+                Preferred Model:<br>
+                <select name="model">
+                    <option value="classic-350">Classic 350</option>
+                    <option value="meteor-350">Meteor 350</option>
+                    <option value="bullet-350">Bullet 350</option>
+                </select><br>
+                Date & Time:<br><input type="datetime-local" name="datetime" /><br>
+                <button disabled>Book Test Ride</button>
+            </form>
+            <img src="PLACEHOLDER_NAGARROAD_TEST_RIDE" alt="Customer booking test ride at Nagar Road showroom" />
+            <span class="broken">Form not functional yet!</span>
+        </div>
+
+        <footer>© 2025 Royal Enfield Showroom Nagar Road | Student Project | Some pages are incomplete.</footer>
+    </div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
