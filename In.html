@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Royal Enfield Showroom - Student Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; padding: 0; }
+        #nav { background: #333; color: #fff; padding: 10px; display: flex; flex-wrap: wrap; justify-content: center; }
+        #nav a { color: #fff; margin: 5px 15px; text-decoration: none; cursor: pointer; white-space: nowrap; }
+        .container { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px; box-shadow: 1px 1px 6px #ccc; }
+        h1 { color: #e85532; }
+        .section { display: none; }
+        .active { display: block; }
+        form input, form select { width: 100%; max-width: 300px; margin: 8px 0 15px 0; padding: 8px; box-sizing: border-box; }
+        form button { background: #e85532; color: #fff; border: none; padding: 10px 20px; cursor: not-allowed; border-radius: 4px; }
+        .broken { color: #d66; font-size: 13px; }
+        footer { font-size:12px; color:#999; margin-top: 40px; text-align:center; padding-bottom: 20px; }
+        img { max-width: 100%; height: auto; margin: 15px 0; border-radius: 6px; display: block; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 15px; }
+
+        /* Responsive text sizes */
+        @media (max-width: 600px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            #nav a { margin: 8px 10px; font-size: 16px; }
+            .container { margin: 10px; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About Us</a>
+        <a onclick="showSection('book')">Book Test Ride</a>
+    </div>
+
+    <div class="container">
+        <!-- Home Section -->
+        <div id="home" class="section active">
+            <h1>Royal Enfield Showroom</h1>
+            <p>Welcome to our demo showroom site. Explore Royal Enfield bikes and book a test ride.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Royal_Enfield_Bullet_350.jpg" alt="Classic Royal Enfield motorcycle" />
+            <hr>
+            <h2>Latest Bikes</h2>
+            <ul>
+                <li>
+                    Classic 350  
+                    <br>
+                    <img src="https://cdn.dekofurn.com/wp-content/uploads/2021/01/Royal-enfield-Classic-350-01-755x420.jpg" alt="Classic 350 Royal Enfield" />
+                </li>
+                <li>
+                    Meteor 350  
+                    <br>
+                    <img src="https://www.rushlane.com/wp-content/uploads/2020/01/Royal-Enfield-Meteor-350-objects-orange-background-112.jpg" alt="Meteor 350 Royal Enfield" />
+                </li>
+                <li>
+                    Bullet 350  
+                    <br>
+                    <img src="https://cdn.dekofurn.com/wp-content/uploads/2022/03/Royal-Enfield-Bullet-350-2022-Indian-Motorcycles-1280x720.jpg" alt="Bullet 350 Royal Enfield" />
+                </li>
+            </ul>
+        </div>
+
+        <!-- About Us Section -->
+        <div id="about" class="section">
+            <h1>About Us</h1>
+            <p>Welcome to [Your City] Royal Enfield Showroom!<br>
+                Our mission is to provide premium motorcycles and reliable service.
+            </p>
+            <img src="https://motorbikewriter.com/wp-content/uploads/2018/11/Royal-Enfield-showroom-road-dubai-dubai-motorcycle-motorbike-fotashirts-hero-500x300.jpeg" alt="Motorcycle showroom interior with Royal Enfield bikes and accessories" />
+            <hr>
+            <h2>Our Values</h2>
+            <ul>
+                <li>Quality Service</li>
+                <li>Customer Satisfaction</li>
+                <li>Genuine Accessories</li>
+            </ul>
+        </div>
+
+        <!-- Book Test Ride Section -->
+        <div id="book" class="section">
+            <h1>Book a Free Test Ride</h1>
+            <form>
+                Name:<br><input type="text" name="name" placeholder="Your name" /><br>
+                Phone:<br><input type="tel" name="phone" placeholder="Your phone number" /><br>
+                Preferred Model:<br>
+                <select name="model">
+                    <option value="classic-350">Classic 350</option>
+                    <option value="meteor-350">Meteor 350</option>
+                    <option value="bullet-350">Bullet 350</option>
+                </select><br>
+                Date & Time:<br><input type="datetime-local" name="datetime" /><br>
+                <button disabled>Book Test Ride</button>
+            </form>
+            <img src="https://cdn.imotorbike.in/images/articles/royal-enfield-roxor-8.jpg" alt="Customer booking a test ride at Royal Enfield showroom" />
+            <span class="broken">Form not functional yet!</span>
+        </div>
+
+        <footer>© 2025 Royal Enfield Demo Showroom | Student Project | Some pages are incomplete.</footer>
+    </div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
